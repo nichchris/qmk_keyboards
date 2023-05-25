@@ -12,15 +12,15 @@ layers:
   Def:
   - [K, W, F, P, "'", -, L, U, Y, X]
   - [{t: R, h: Gui}, {t: S, h: Alt}, {t: T, h: Control}, {t: H, h: Shift}, ',', ., {t: N, h: Shift}, {t: A, h: Control}, {t: I, h: Alt}, {t: O, h: Gui}]
-  -    [C, G, D,       M, B, J]
+  -    [{t: C, h: AltGr}, G, D,       M, B, {t: J, h: AltGr}]
   - {t: Nav, h: ENTER}
   - {t: Mou, h: SPACE}
   - E
   - {t: Sym, h: BSPC}
   Nav:
-  - [TAB, F2, F3, F4, F5, C(BSPC), F2, F5, F9, RARW]
-  - [{t: LGUI, h: sticky}, {t: LALT, h: sticky}, {t: LSHFT, h: sticky}, {t: LCTRL, h: sticky}, LC(Z), DEL, LARW, DARW, UARW, END]
-  - [LC(X), LC(C), LC(V), HOME, PG DN, PG UP]
+  - [ESC, F2, F5, TAB, DEL, C(BSPC), PG DN, RARW, PG UP, ENTER]
+  - [LGUI, LALT, LSHFT, LCTRL, LC(Z), MB4, LARW, DARW, UARW, MB5]
+  - [LC(X), LC(C), LC(V), HOME, END, ALTGR]
   - [{type: held}, '', '', 'BSPC']
   Nav_copy:
   - [F1, F2, F3, F4, F5, ESC, HOME, UARW, END, RARW]
@@ -63,32 +63,61 @@ combos:
   - p: [20, 21]
     k: Z
     l: [Def]
-  - p: [24, 25]
-    k: ;
-    l: [Def, Sym, Num]
   - p: [1, 11]
-    k: '['
-    l: [Def, Sym, Num]
-  - p: [8, 18]
-    k: ']'
-    l: [Def, Sym, Num]
-  - p: [2, 12]
-    k: (
-    l: [Def, Sym, Num]
-  - p: [7, 17]
-    k: )
-    l: [Def, Sym, Num]
-  - p: [3, 13]
     k: '{'
-    l: [Def, Sym, Num]
-  - p: [6, 16]
+    l: [Def]
+  - p: [8, 18]
     k: '}'
-    l: [Def, Sym, Num]
+    l: [Def]
+  - p: [2, 12]
+    k: '['
+    l: [Def]
+  - p: [7, 17]
+    k: ']'
+    l: [Def]
+  - p: [3, 13]
+    k: '('
+    l: [Def]
+  - p: [6, 16]
+    k: ')'
+    l: [Def]
+  - p: [7, 16]
+    k: '/'
+    l: [Def]
+  - p: [7, 18]
+    k: '\'
+    l: [Def]
+  - p: [2, 11]
+    k: '<'
+    l: [Def]
+  - p: [2, 13]
+    k: '>'
+    l: [Def]
+  - p: [6, 5]
+    k: '^'
+    l: [Def]
+
   - p: [3, 4]
-    k: ESC
+    k: redo
+    l: [Def]
   - p: [13, 14]
-    k: DEL
+    k: undo
+    l: [Def]
+  - p: [22,26]
+    k: esc
+    l: [Def]
+  - p: [14,15]
+    k: caps
+    l: [Def]
+    a: bottom
   - p: [20, 21]
     k: LC(A)
     l: [Nav]
     a: bottom
+  - p: [27, 28]
+    k: caps word
+    l: [Def]
+    a: bottom
+  - p: [26, 27]
+    k: sym
+    l: [Def]

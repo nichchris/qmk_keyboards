@@ -54,15 +54,18 @@ const uint16_t PROGMEM backwards_slash_combo[] = {KC_U, ALT_T(KC_I), COMBO_END};
 const uint16_t PROGMEM less_than_combo[]        = {KC_F, ALT_T(KC_S), COMBO_END};
 const uint16_t PROGMEM larger_than_combo[]      = {KC_F, SFT_T(KC_H), COMBO_END};
 
-const uint16_t PROGMEM redo_combo[]        = {KC_P, NO_MINS, COMBO_END};
+const uint16_t PROGMEM redo_combo[]        = {KC_P, KC_NUHS, COMBO_END};
 const uint16_t PROGMEM undo_combo[]        = {SFT_T(KC_H), KC_COMM, COMBO_END};
 const uint16_t PROGMEM esc_combo[]         = {KC_D, L_NAV, COMBO_END};
-const uint16_t PROGMEM ent_combo[]         = {KC_X, GUI_T(KC_O), COMBO_END};
-const uint16_t PROGMEM ent_thumb_combo[]   = {KC_E, KC_M, COMBO_END};
-const uint16_t PROGMEM bspc_combo[]        = {KC_BSPC, KC_LSFT, COMBO_END};
+// const uint16_t PROGMEM ent_combo[]         = {KC_X, GUI_T(KC_O), COMBO_END};
+// const uint16_t PROGMEM ent_thumb_combo[]   = {KC_E, KC_M, COMBO_END};
+// const uint16_t PROGMEM bspc_combo[]        = {KC_BSPC, KC_LSFT, COMBO_END};
 const uint16_t PROGMEM caps_combo[]        = {NO_COMM, KC_DOT, COMBO_END};
 const uint16_t PROGMEM cps_word_combo[]   = {L_MOU, KC_E, COMBO_END};
 // const uint16_t PROGMEM sleep_combo[]       = {L_MOU, KC_E, COMBO_END};
+// repeat
+// tab
+
 
 // const uint16_t PROGMEM bspc_combo[]        = {KC_BSPC, KC_LSFT, COMBO_END};
 // const uint16_t PROGMEM delete_combo[]      = {KC_BSPC, KC_LSFT, COMBO_END};

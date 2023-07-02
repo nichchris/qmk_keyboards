@@ -12,7 +12,7 @@ layers:
   Def:
   - [K, W, F, P, "'", -, L, U, Y, X]
   - [{t: R, h: Gui}, {t: S, h: Alt}, {t: T, h: Control}, {t: H, h: Shift}, ',', ., {t: N, h: Shift}, {t: A, h: Control}, {t: I, h: Alt}, {t: O, h: Gui}]
-  -    [{t: C, h: AltGr}, G, D,       M, B, {t: J, h: AltGr}]
+  - [{t: C, h: AltGr}, G, D, M, B, {t: J, h: AltGr}]
   - {t: Nav, h: ENTER}
   - {t: Mou, h: SPACE}
   - E
@@ -42,6 +42,16 @@ layers:
   - ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
   - ['', '', '', '', '', '']
   - [{type: held}, '', '', {type: held}]
+  Space_FN:
+  - [ESC, F2, F5, TAB, DEL, C(BSPC), PG DN, RARW, PG UP, ENTER]
+  - [LGUI, LALT, LSHFT, LCTRL, LC(Z), MB4, LARW, DARW, UARW, MB5]
+  - [LC(X), LC(C), LC(V), HOME, END, ALTGR]
+  - [{type: held}, '', '', 'BSPC']
+  SYS:
+  - [ESC, F2, F5, TAB, DEL, C(BSPC), PG DN, RARW, PG UP, ENTER]
+  - [LGUI, LALT, LSHFT, LCTRL, LC(Z), MB4, LARW, DARW, UARW, MB5]
+  - [LC(X), LC(C), LC(V), HOME, END, ALTGR]
+  - [{type: held}, '', '', 'BSPC']
 combos:  
   - p: [7, 8]
     k: Ø

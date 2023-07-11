@@ -22,36 +22,21 @@ layers:
   - [LGUI, LALT, LSHFT, LCTRL, LC(Z), MB4, LARW, DARW, UARW, MB5]
   - [LC(X), LC(C), LC(V), HOME, END, ALTGR]
   - [{type: held}, '', '', 'BSPC']
-  Nav_copy:
-  - [F1, F2, F3, F4, F5, ESC, HOME, UARW, END, RARW]
-  - [{t: LGUI, h: sticky}, {t: LALT, h: sticky}, {t: LSHFT, h: sticky}, {t: LCTRL, h: sticky}, LC(Z), DEL, LARW, DARW, UARW, END]
-  - [LC(X), LC(C), LC(V), BSPC, DARW, TAB]
-  - [{type: held}, '', '', '']
   Sym:
   - ['=', 9, 8, 7, -, '*', '&', '~', '|', {t: ESC, h: '`'}]
   - [3, 2, 1, 0, '+', ., {t: '"', h: Shift}, {t: '#', h: Control}, {t: '$', h: Alt}, {t: '%', h: Gui}]
-  - [6, 5, 4, '!', '?', '@']
-  - ['', '', '', {type: held}]
-  Sym_copy:
-  - ['', '', '', '', '', ^, '', '', '`', '']
-  - ['', '', '', '', '', '', LCTRL, LSHFT, LALT, LGUI]
-  - ['', '', '', '', '', '']
-  - ['', '', '', {type: held}]
-  Num:
-  - ['', '', '', '', '', '', '', '', '', '']
-  - ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
-  - ['', '', '', '', '', '']
-  - [{type: held}, '', '', {type: held}]
-  Space_FN:
-  - [ESC, F2, F5, TAB, DEL, C(BSPC), PG DN, RARW, PG UP, ENTER]
-  - [LGUI, LALT, LSHFT, LCTRL, LC(Z), MB4, LARW, DARW, UARW, MB5]
-  - [LC(X), LC(C), LC(V), HOME, END, ALTGR]
-  - [{type: held}, '', '', 'BSPC']
+  - [6, 5, 4, '!', '?', {t: '@', h: AltGr}]
+  - ['', '', 'ESC', {type: held}]
+  Mou:
+  - [ESC, MUTE, PREV, NXT, DEL, C(BSPC), PG DN, RARW, PG UP, BSPC]
+  - [PLAY, VOLU, MB4, MB5, MB3, MB4, LARW, DARW, UARW, ENTER]
+  - [VOLD, WH_D, WH_U, HOME, END, ALTGR]
+  - ['', {type: held}, '', 'BSPC']
   SYS:
-  - [ESC, F2, F5, TAB, DEL, C(BSPC), PG DN, RARW, PG UP, ENTER]
-  - [LGUI, LALT, LSHFT, LCTRL, LC(Z), MB4, LARW, DARW, UARW, MB5]
-  - [LC(X), LC(C), LC(V), HOME, END, ALTGR]
-  - [{type: held}, '', '', 'BSPC']
+  - [F1, F2, F3, F4, F5, F6, F7, F9, PG UP, ENTER]
+  - [PLAY, VOLU, MB4, MB5, MB3, MB4, LARW, DARW, UARW, MB5]
+  - [LC(X), VOLD, LC(V), HOME, END, ALTGR]
+  - [{type: held}, '', '', {type: held}]
 combos:  
   - p: [7, 8]
     k: Ø

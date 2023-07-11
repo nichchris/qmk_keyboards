@@ -93,12 +93,12 @@ combo_t key_combos[] = {
     [LARGER_THAN]       = COMBO(larger_than_combo, S(NO_LABK)),
     [REDO]              = COMBO(redo_combo, C(KC_Y)),
     [UNDO]              = COMBO(undo_combo, C(KC_Z)),
-    [ESC]               = COMBO(esc_combo, ALGR(NO_9)),
-    [ENT]               = COMBO(ent_combo, KC_ENT),
-    [TENT]              = COMBO(ent_thumb_combo, KC_ENT),
-    [BACKSPC]           = COMBO(bspc_combo, KC_BSPC),
+    [ESC]               = COMBO(esc_combo, KC_ESC),
+    // [ENT]               = COMBO(ent_combo, KC_ENT),
+    // [TENT]              = COMBO(ent_thumb_combo, KC_ENT),
+    // [BACKSPC]           = COMBO(bspc_combo, KC_BSPC),
     [CAPS]              = COMBO(caps_combo, KC_CAPS),
-    [CPS_WORD]         = COMBO_ACTION(cps_word_combo),
+    [CPS_WORD]          = COMBO_ACTION(cps_word_combo),
 };
 
 void process_combo_event(uint16_t combo_index, bool pressed) {

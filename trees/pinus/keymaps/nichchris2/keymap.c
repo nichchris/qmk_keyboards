@@ -78,7 +78,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // ╭─────────────────────────────────────────────╮ ╭─────────────────────────────────────────────╮
         KC_K,    KC_W,    KC_F,    KC_P, XXXXXXX,    XXXXXXX,    KC_L,    KC_U,    KC_Y,    KC_X,
 // ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
-    GUI_T(KC_R),ALT_T(KC_S),CTL_T(KC_T),SFT_T(KC_H), KC_NUHS, NO_MINS, RSFT_T(KC_N), CTL_T(KC_A), ALT_T(KC_I), GUI_T(KC_O),
+    GUI_T(KC_R),ALT_T(KC_S),CTL_T(KC_T),SFT_T(KC_H), NO_MINS, KC_NUHS, RSFT_T(KC_N), CTL_T(KC_A), ALT_T(KC_I), GUI_T(KC_O),
 // ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
      XXXXXXX, ALGR_T(KC_C),    KC_G,    KC_D,  NO_COMM,   KC_DOT,    KC_M,    KC_B,ALGR_T(KC_J),  XXXXXXX,
 // ╰─────────────────────────────────────────────┤ ├─────────────────────────────────────────────╯
@@ -88,25 +88,25 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [_SYM]= LAYOUT(
 // ╭─────────────────────────────────────────────╮ ╭─────────────────────────────────────────────╮
-      NO_EQL,    KC_9,    KC_8,    KC_7, XXXXXXX,    XXXXXXX, NO_AMPR, NO_TILD, NO_PIPE, NO_GRV,//QK_GESC,
+      NO_EQL,    KC_9,    KC_8,    KC_7, XXXXXXX,    XXXXXXX, NO_HASH, NO_PERC, NO_AMPR, NO_DQUO,//QK_GESC,
 // ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
-        KC_3,    KC_2,    KC_1,    KC_0,  NO_MINS,   NO_CIRC, RSFT_T(NO_DQUO), CTL_T(NO_HASH), ALGR_T(NO_DLR),  GUI_T(NO_PERC),
+        KC_3,    KC_2,    KC_1,    KC_0,  NO_MINS,   NO_AT, KC_LSFT, KC_LCTL, KC_LALT,  KC_LGUI,
 // ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
-     XXXXXXX,    KC_6,    KC_5,    KC_4,  NO_PLUS,    KC_DOT, NO_EXLM, NO_QUES,ALGR_T(ALGR(NO_2)), XXXXXXX,
+     XXXXXXX,    KC_6,    KC_5,    KC_4,  NO_PLUS,    KC_DOT, NO_EXLM, NO_QUES,ALGR_T(NO_PIPE), XXXXXXX,
 // ╰─────────────────────────────────────────────┤ ├─────────────────────────────────────────────╯
-                                L_NAV,   L_MOU,     KC_ESC,    L_SYM
+                                L_NAV,   L_MOU,     QK_GESC,    L_SYM
 //                   ╰───────────────────────────╯ ╰──────────────────╯
 ),
 
 [_SYM_COPY]= LAYOUT(
 // ╭─────────────────────────────────────────────╮ ╭─────────────────────────────────────────────╮
-      NO_EQL,    KC_9,    KC_8,    KC_7, XXXXXXX,    XXXXXXX, NO_AMPR, NO_TILD, NO_PIPE, NO_GRV,//QK_GESC,
+      NO_EQL,    KC_9,    KC_8,    KC_7, XXXXXXX,    XXXXXXX, NO_HASH, NO_PERC, NO_AMPR, NO_DQUO,//QK_GESC,
 // ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
-        KC_3,    KC_2,    KC_1,    KC_0,  NO_MINS,   NO_CIRC, RSFT_T(NO_DQUO), CTL_T(NO_HASH), ALGR_T(NO_DLR),  GUI_T(NO_PERC),
+        KC_3,    KC_2,    KC_1,    KC_0,  NO_MINS,     NO_AT, KC_LSFT, KC_LCTL, KC_LALT,  KC_LGUI,
 // ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
-     XXXXXXX,    KC_6,    KC_5,    KC_4,  NO_PLUS,    KC_DOT, NO_EXLM, NO_QUES,ALGR_T(ALGR(NO_2)), XXXXXXX,
+     XXXXXXX,    KC_6,    KC_5,    KC_4,  NO_PLUS,    KC_DOT, NO_EXLM, NO_QUES,ALGR_T(NO_PIPE), XXXXXXX,
 // ╰─────────────────────────────────────────────┤ ├─────────────────────────────────────────────╯
-                                L_NAV,   L_MOU,     KC_ESC,    L_SYM
+                                L_NAV,   L_MOU,     QK_GESC,    L_SYM
 //                   ╰───────────────────────────╯ ╰──────────────────╯
 ),
 [_NAV]= LAYOUT(
@@ -127,7 +127,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
       KC_TAB,  KC_WH_D, KC_BTN4, KC_BTN5, KC_WH_U,C(KC_BSPC), KC_VOLD,  KC_MUTE,  KC_VOLU, KC_ENT,
 // ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
-     XXXXXXX,C(KC_TAB),G(KC_TAB),A(KC_TAB), KC_DEL,    KC_DEL,   XXXXXXX,  XXXXXXX,  XXXXXXX, XXXXXXX,
+     XXXXXXX,C(KC_TAB),G(KC_TAB),A(KC_TAB), KC_DEL,    KC_DEL,   NO_AT,  NO_TILD,  XXXXXXX, XXXXXXX,
 // ╰─────────────────────────────────────────────┤ ├─────────────────────────────────────────────╯
                                 _______,  _______,  XXXXXXX, _______
 //                   ╰───────────────────────────╯ ╰──────────────────╯

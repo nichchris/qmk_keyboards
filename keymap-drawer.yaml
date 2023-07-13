@@ -10,7 +10,7 @@ layout:
     drop_inner: true
 layers:
   Def:
-  - [K, W, F, P, "'", -, L, U, Y, X]
+  - [K, W, F, P, -, "'", L, U, Y, X]
   - [{t: R, h: Gui}, {t: S, h: Alt}, {t: T, h: Control}, {t: H, h: Shift}, ',', ., {t: N, h: Shift}, {t: A, h: Control}, {t: I, h: Alt}, {t: O, h: Gui}]
   - [{t: C, h: AltGr}, G, D, M, B, {t: J, h: AltGr}]
   - {t: Nav, h: ENTER}
@@ -19,23 +19,23 @@ layers:
   - {t: Sym, h: BSPC}
   Nav:
   - [ESC, F2, F5, TAB, DEL, C(BSPC), PG DN, RARW, PG UP, ENTER]
-  - [LGUI, LALT, LSHFT, LCTRL, LC(Z), MB4, LARW, DARW, UARW, MB5]
+  - [LGUI, LALT, LCTRL, LSHFT, LC(Z), MB4, LARW, DARW, UARW, MB5]
   - [LC(X), LC(C), LC(V), HOME, END, ALTGR]
   - [{type: held}, '', '', 'BSPC']
   Sym:
   - ['=', 9, 8, 7, -, '*', '&', '~', '|', {t: ESC, h: '`'}]
   - [3, 2, 1, 0, '+', ., {t: '"', h: Shift}, {t: '#', h: Control}, {t: '$', h: Alt}, {t: '%', h: Gui}]
   - [6, 5, 4, '!', '?', {t: '@', h: AltGr}]
-  - ['', '', 'ESC', {type: held}]
+  - ['', '', '', {type: held}]
   Mou:
   - [ESC, MUTE, PREV, NXT, DEL, C(BSPC), PG DN, RARW, PG UP, BSPC]
-  - [PLAY, VOLU, MB4, MB5, MB3, MB4, LARW, DARW, UARW, ENTER]
+  - [PLAY, VOLU, MB4, MB5, MB3, MB4, LSHFT, LCTRL, LALT, LGUI]
   - [VOLD, WH_D, WH_U, HOME, END, ALTGR]
   - ['', {type: held}, '', 'BSPC']
   SYS:
-  - [F1, F2, F3, F4, F5, F6, F7, F9, PG UP, ENTER]
-  - [PLAY, VOLU, MB4, MB5, MB3, MB4, LARW, DARW, UARW, MB5]
-  - [LC(X), VOLD, LC(V), HOME, END, ALTGR]
+  - [F1, F2, F3, F4, F5, F6, F7, F8, F9, F10]
+  - ['ENT', 'PRNTSCRN', '', 'LOCK', F11, F12, LSHFT, LCTRL, LALT, LGUI]
+  - ['', '', '', HOME, END, ALTGR]
   - [{type: held}, '', '', {type: held}]
 combos:  
   - p: [7, 8]

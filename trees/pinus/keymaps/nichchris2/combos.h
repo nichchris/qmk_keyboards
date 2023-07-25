@@ -39,9 +39,9 @@ uint16_t COMBO_LEN = COMBO_LENGTH; // remove the COMBO_COUNT define and use this
 
 const uint16_t PROGMEM nordic_ae_combo[] = {KC_L, KC_Y, COMBO_END};
 const uint16_t PROGMEM nordic_oe_combo[] = {KC_U, KC_Y, COMBO_END};
-const uint16_t PROGMEM nordic_aa_combo[] = {KC_B, KC_J, COMBO_END};
+const uint16_t PROGMEM nordic_aa_combo[] = {KC_B, ALGR_T(KC_J), COMBO_END};
 const uint16_t PROGMEM q_combo[]         = {KC_W, KC_P, COMBO_END};
-const uint16_t PROGMEM z_combo[]         = {KC_C, KC_G, COMBO_END};
+const uint16_t PROGMEM z_combo[]         = {ALGR_T(KC_C), KC_G, COMBO_END};
 const uint16_t PROGMEM v_combo[]         = {KC_W, KC_F, COMBO_END};
 
 const uint16_t PROGMEM para_l_combo[]     = {KC_P, SFT_T(KC_H), COMBO_END};

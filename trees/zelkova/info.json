@@ -3,8 +3,8 @@
     "keyboard_name": "trees/zelkova",
     "maintainer": "nichchris",
     "bootloader": "rp2040",
-    "diode_direction": "COL2ROW",
     "processor": "RP2040",
+    "diode_direction": "COL2ROW",
     "url": "",
     "usb": {
         "device_version": "1.0.0",

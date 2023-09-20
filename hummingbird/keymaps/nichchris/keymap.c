@@ -62,15 +62,15 @@ enum custom_keycodes
 
 // LEFT HAND HOME ROW MODS
 #define SHT_H MT(MOD_LSFT, KC_H)
-#define CTL_T MT(MOD_LCTL, KC_T)
+#define CRTL_T MT(MOD_LCTL, KC_T)
 #define ALT_S MT(MOD_LALT, KC_S)
 #define GUI_R MT(MOD_LGUI, KC_R)
 #define RALT_C MT(MOD_RALT, KC_C)
 // RIGHT HAND HOME ROW MODS
 #define SHT_N MT(MOD_RSFT, KC_N)
-#define CTL_A MT(MOD_LCTL, KC_I)
-#define ALT_I MT(MOD_LGUI, KC_A)
-#define GUI_O MT(MOD_LALT, KC_O)
+#define CRTL_A MT(MOD_LCTL, KC_A)
+#define ALT_I MT(MOD_LALT, KC_I)
+#define GUI_O MT(MOD_LGUI, KC_O)
 #define RALT_J MT(MOD_RALT, KC_J)
 
 // OTHER
@@ -92,34 +92,79 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      */
     [_BASE] = LAYOUT_hummingbird(
         KC_K,    KC_W,    KC_F,    KC_P,   NO_MINS, KC_NUHS,   KC_L,    KC_U,    KC_Y,   KC_X,
-       GUI_R,   ALT_S,   CTL_T,   SHT_H,   NO_COMM,  KC_DOT,  SHT_N,   CTL_A,   ALT_I,   GUI_O,  
+       GUI_R,   ALT_S,   CRTL_T,   SHT_H,   NO_COMM,  KC_DOT,  SHT_N,   CRTL_A,   ALT_I,   GUI_O,  
                RALT_C,    KC_G,    KC_D,                       KC_M,    KC_B,  RALT_J,
                                   L_NAV,     L_MOU,    KC_E,  L_SYM
     ),
-    // [_NUM] = LAYOUT_hummingbird(
-    //     XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_PLUS, KC_7,    KC_8,    KC_9,    KC_ASTR,
-    //     KC_LCTL, KC_LALT, KC_LGUI, KC_LSFT, XXXXXXX, KC_MINS, KC_4,    KC_5,    KC_6,    KC_SLASH,
-    //              XXXXXXX, XXXXXXX, XXXXXXX,                   KC_1,    KC_2,    KC_3,
-    //                                _______, _______, KC_LSFT, KC_0
-    // ),
-    // [_NAV] = LAYOUT_hummingbird(
-    //     XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_VOLD, KC_VOLU, KC_BSPC, KC_DEL,  KC_INS,   KC_MPLY,
-    //     KC_LCTL, KC_LALT, KC_LGUI, KC_LSFT, KC_MUTE, KC_LEFT, KC_DOWN, KC_UP,   KC_RIGHT, KC_TAB,
-    //              XXXXXXX, XXXXXXX, XXXXXXX,                   KC_HOME, XXXXXXX, KC_END,
-    //                                _______, _______, _______, _______
-    // ),
-    // [_SYM] = LAYOUT_hummingbird(
-    //     KC_GRV,  XXXXXXX, KC_DQT,  KC_MDOT, KC_LBRC, KC_RBRC, KC_BSLS, KC_PIPE, KC_LT,   KC_GT,
-    //     KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_LPRN, KC_RPRN, KC_AMPR, KC_ASTR, KC_PERC, KC_CIRC,
-    //              XXXXXXX, KC_QUOT, KC_UNDS,                   KC_MINS, KC_PLUS, KC_EQL,
-    //                                _______, KC_LSFT, _______, _______
-    // ),
-    // [_FUN] = LAYOUT_hummingbird(
-    //     QK_RBT,  QK_BOOT, _______, _______, _______, XXXXXXX, KC_F7,   KC_F8,   KC_F9,   KC_F12,
-    //     _______, _______, _______, _______, _______, XXXXXXX, KC_F4,   KC_F5,   KC_F6,   KC_F11,
-    //              _______, _______, _______,                   KC_F1,   KC_F2,   KC_F3,
-    //                                _______, _______, _______, _______
-    // )
+[_SYM]= LAYOUT_hummingbird(
+// ╭─────────────────────────────────────────────╮ ╭─────────────────────────────────────────────╮
+      NO_EQL,    KC_9,    KC_8,    KC_7, NO_MINS, RALT(NO_4), NO_HASH, NO_PERC, NO_AMPR, NO_DQUO,//QK_GESC,
+// ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
+        KC_3,    KC_2,    KC_1,    KC_0,  NO_PLUS,    KC_DOT, KC_LSFT, KC_LCTL, KC_LALT,  KC_LGUI,
+// ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
+                 KC_6,    KC_5,    KC_4,                      NO_EXLM, NO_QUES,ALGR_T(NO_PIPE),
+// ╰─────────────────────────────────────────────┤ ├─────────────────────────────────────────────╯
+                                L_NAV,   L_MOU,     QK_GESC,    L_SYM
+//                   ╰───────────────────────────╯ ╰──────────────────╯
+),
+
+[_SYM_COPY]= LAYOUT_hummingbird(
+// ╭─────────────────────────────────────────────╮ ╭─────────────────────────────────────────────╮
+      NO_EQL,    KC_9,    KC_8,    KC_7, NO_MINS,   S(NO_4), NO_HASH, NO_PERC, NO_AMPR, NO_DQUO,//QK_GESC,
+// ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
+        KC_3,    KC_2,    KC_1,    KC_0,  NO_PLUS,    KC_DOT, KC_LSFT, KC_LCTL, KC_LALT,  KC_LGUI,
+// ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
+                 KC_6,    KC_5,    KC_4,                      NO_EXLM, NO_QUES,ALGR_T(NO_PIPE), 
+// ╰─────────────────────────────────────────────┤ ├─────────────────────────────────────────────╯
+                                L_NAV,   L_MOU,     QK_GESC,    L_SYM
+//                   ╰───────────────────────────╯ ╰──────────────────╯
+),
+[_NAV]= LAYOUT_hummingbird(
+// ╭─────────────────────────────────────────────╮ ╭─────────────────────────────────────────────╮
+     KC_ESC,   KC_F2,   KC_F5,  KC_TAB,  KC_DEL,    C(KC_BSPC), KC_PGUP,   KC_UP, KC_PGDN,  KC_ENT,
+// ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
+    KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, C(KC_Z),    KC_BTN4, KC_LEFT, KC_DOWN, KC_RIGHT, KC_BTN5,
+// ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
+             C(KC_X), C(KC_C), C(KC_V),                  KC_HOME,  KC_END, KC_TAB, 
+// ╰─────────────────────────────────────────────┤ ├─────────────────────────────────────────────╯
+                                L_NAV,   L_MOU,     KC_E,    L_SYM
+//                   ╰───────────────────────────╯ ╰──────────────────╯
+),
+
+[_MOU] = LAYOUT_hummingbird(
+// ╭─────────────────────────────────────────────╮ ╭─────────────────────────────────────────────╮
+      KC_ESC,  KC_WH_U, KC_BTN5,  KC_TAB, XXXXXXX,C(KC_BSPC), KC_MPRV,  KC_MPLY,  KC_MNXT, KC_ENT,
+// ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
+      KC_TAB,  KC_WH_D, KC_BTN4, KC_LSFT,KC_DEL,    KC_DEL, KC_VOLD,  KC_MUTE,  KC_VOLU, KC_ESC,
+// ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
+               C(KC_TAB),G(KC_TAB),A(KC_TAB),                 NO_AT,  NO_TILD,  NO_DIAE,
+// ╰─────────────────────────────────────────────┤ ├─────────────────────────────────────────────╯
+                                _______,  _______,  XXXXXXX, _______
+//                   ╰───────────────────────────╯ ╰──────────────────╯
+),
+
+[_SYS] = LAYOUT_hummingbird(
+// ╭─────────────────────────────────────────────╮ ╭─────────────────────────────────────────────╮
+     KC_F1,    KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,    KC_F8,    KC_F9,    KC_F10,
+// ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
+     KC_TAB,  KC_PSCR, XXXXXXX, KC_SLEP,  KC_F11, KC_F12, KC_LSFT, KC_LCTL, KC_LALT, KC_LGUI,
+// ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
+              KC_MPLY, KC_MPRV,  KC_MNXT,                 KC_HOME,  KC_END, KC_ALGR, 
+// ╰─────────────────────────────────────────────┤ ├─────────────────────────────────────────────╯
+                                _______,  _______,  XXXXXXX, _______
+//                   ╰───────────────────────────╯ ╰──────────────────╯
+),
+// [_SYM] = LAYOUT_hummingbird(
+// // ╭─────────────────────────────────────────────╮ ╭─────────────────────────────────────────────╮
+//         KC_V,    KC_9,    KC_8,    KC_7, XXXXXXX,    XXXXXXX,    KC_L,    KC_U,    KC_Y,    KC_X,
+// // ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
+//         KC_0,    KC_3,    KC_2,    KC_1, NO_MINS, KC_QUOT, SFT_T(KC_N), CTL_T(KC_A), ALT_T(KC_I), GUI_T(KC_O),
+// // ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
+//      XXXXXXX,    KC_6,    KC_5,    KC_4, NO_COMM, KC_DOT, KC_M, KC_F, KC_J, XXXXXXX,
+// // ╰─────────────────────────────────────────────┤ ├─────────────────────────────────────────────╯
+//                                 _______,  _______,  XXXXXXX, _______
+// //                   ╰───────────────────────────╯ ╰──────────────────╯
+// ),
 };
 
 layer_state_t layer_state_set_user(layer_state_t state)

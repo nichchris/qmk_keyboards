@@ -7,7 +7,7 @@
 #define DIODE_DIRECTION COL2ROW
 // */
 #define MATRIX_COLS 5
-#define MATRIX_ROWS 6
+#define MATRIX_ROWS 6 // ROWS ARE DOUBLED UP
 
 /* Serial settings */
 /* Serial communication */
@@ -17,15 +17,17 @@
 #define SERIAL_USART_PIN_SWAP
 
 #define RP2040_BOOTLOADER_DOUBLE_TAP_RESET              // Activates the double-tap behavior
-#define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_TIMEOUT 200 // Timeout window in ms in which the double tap can occur.
+#define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_TIMEOUT 200U // Timeout window in ms in which the double tap can occur.
 #define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_LED GP17     // Specify a optional status led by GPIO number which blinks when entering the bootloader
 
+#define EE_HANDS
 
-// #pragma once
-
-// #define DIODE_DIRECTION COL2ROW
-// #define MATRIX_ROWS 8
-// #define MATRIX_COLS 9
+/* Top left key on left half */
+#define BOOTMAGIC_LITE_ROW 0
+#define BOOTMAGIC_LITE_COLUMN 0
+/* Top right key on right half */
+#define BOOTMAGIC_LITE_ROW_RIGHT 3
+#define BOOTMAGIC_LITE_COLUMN_RIGHT 4
 
 // #define EE_HANDS
 // #define SPLIT_USB_DETECT
@@ -56,3 +58,13 @@
 
 // #define TAPPING_TERM 190
 // // #define IGNORE_MOD_TAP_INTERRUPT
+
+// Not yet available in `info.json`
+// #ifdef BOOTMAGIC_ENABLE
+// // Top left key on left half
+// #define BOOTMAGIC_LITE_ROW 0
+// #define BOOTMAGIC_LITE_COLUMN 0
+// // Top right key on right half
+// #define BOOTMAGIC_LITE_ROW_RIGHT 6
+// #define BOOTMAGIC_LITE_COLUMN_RIGHT 0
+// #endif

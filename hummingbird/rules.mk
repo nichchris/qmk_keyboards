@@ -4,7 +4,7 @@
 ### https://github.com/GEIGEIGEIST/qmk-config-totem/blob/main/totem/rules.mk
 # Ignore some warnings during the build, likely to be fixed before RP2040 PR is merged
 ALLOW_WARNINGS = yes
-BOOTLOADER = RP2040
+
 ### needed?
 # # PIO serial/WS2812 drivers must be used on RP2040
 # SERIAL_DRIVER = vendor
@@ -18,3 +18,6 @@ LTO_ENABLE = no
 SPACE_CADET_ENABLE = no
 GRAVE_ESC_ENABLE = no 
 MAGIC_ENABLE = no
+
+BOOTMAGIC_ENABLE = yes
+

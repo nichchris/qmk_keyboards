@@ -1,13 +1,18 @@
 #pragma once
-#include "config_common.h"
 
 //* also configured in info.json
-#define MATRIX_COL_PINS { GP26, GP27, GP28, GP29, GP6 }
-#define MATRIX_ROW_PINS { GP2, GP4, GP3}
-#define DIODE_DIRECTION COL2ROW
+// #define MATRIX_COL_PINS { GP26, GP27, GP28, GP29, GP6 }
+// #define MATRIX_ROW_PINS { GP2, GP4, GP3}
+// #define DIODE_DIRECTION COL2ROW
 // */
 #define MATRIX_COLS 5
-#define MATRIX_ROWS 6 // ROWS ARE DOUBLED UP
+#define MATRIX_ROWS 8 // ROWS ARE DOUBLED UP
+
+//#define MASTER_LEFT
+#define EE_HANDS
+//#define SPLIT_USB_DETECT
+//#define SPLIT_HAND_PIN GP12
+//#define USE_SERIAL
 
 /* Serial settings */
 /* Serial communication */
@@ -20,13 +25,12 @@
 #define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_TIMEOUT 200U // Timeout window in ms in which the double tap can occur.
 #define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_LED GP17     // Specify a optional status led by GPIO number which blinks when entering the bootloader
 
-#define EE_HANDS
 
 /* Top left key on left half */
 #define BOOTMAGIC_LITE_ROW 0
 #define BOOTMAGIC_LITE_COLUMN 0
 /* Top right key on right half */
-#define BOOTMAGIC_LITE_ROW_RIGHT 3
+#define BOOTMAGIC_LITE_ROW_RIGHT 4
 #define BOOTMAGIC_LITE_COLUMN_RIGHT 4
 
 // #define EE_HANDS

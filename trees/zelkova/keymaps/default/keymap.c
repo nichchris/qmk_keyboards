@@ -1,9 +1,9 @@
 #include QMK_KEYBOARD_H
-#include "hummingbird.h"
+#include "zelkova.h"
 
 //// definitions
 // layers
-enum hummingbird_layers {
+enum zelkova_layers {
     _ALPHA,
     _NUM,
     _NAV,
@@ -73,31 +73,31 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      *             │ESC│SPC││RET│BSP│
      *             └───┴───┘└───┴───┘
      */
-    [_ALPHA] = LAYOUT_hummingbird(
+    [_ALPHA] = LAYOUT_zelkova(
         KC_Q,    KC_W,    KC_F,    KC_P,    KC_B,    KC_J,    KC_L,    KC_U,    KC_Y,    KC_SCLN,
         CTL_A,   ALT_R,   GUI_S,   SHT_T,   RALT_G,  RALT_M,  SHT_N,   GUI_E,   ALT_I,   CTL_O,  
                  KC_X,    KC_C,    KC_D,                      KC_H,    KC_COMM, KC_DOT,
                                    NUM_ESC, NAV_SPC, SYM_ENT, FUN_BSP
     ),
-    [_NUM] = LAYOUT_hummingbird(
+    [_NUM] = LAYOUT_zelkova(
         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_PLUS, KC_7,    KC_8,    KC_9,    KC_ASTR,
         KC_LCTL, KC_LALT, KC_LGUI, KC_LSFT, XXXXXXX, KC_MINS, KC_4,    KC_5,    KC_6,    KC_SLASH,
                  XXXXXXX, XXXXXXX, XXXXXXX,                   KC_1,    KC_2,    KC_3,
                                    _______, _______, KC_LSFT, KC_0
     ),
-    [_NAV] = LAYOUT_hummingbird(
+    [_NAV] = LAYOUT_zelkova(
         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_VOLD, KC_VOLU, KC_BSPC, KC_DEL,  KC_INS,   KC_MPLY,
         KC_LCTL, KC_LALT, KC_LGUI, KC_LSFT, KC_MUTE, KC_LEFT, KC_DOWN, KC_UP,   KC_RIGHT, KC_TAB,
                  XXXXXXX, XXXXXXX, XXXXXXX,                   KC_HOME, XXXXXXX, KC_END,
                                    _______, _______, _______, _______
     ),
-    [_SYM] = LAYOUT_hummingbird(
+    [_SYM] = LAYOUT_zelkova(
         KC_GRV,  XXXXXXX, KC_DQT,  KC_MDOT, KC_LBRC, KC_RBRC, KC_BSLS, KC_PIPE, KC_LT,   KC_GT,
         KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_LPRN, KC_RPRN, KC_AMPR, KC_ASTR, KC_PERC, KC_CIRC,
                  XXXXXXX, KC_QUOT, KC_UNDS,                   KC_MINS, KC_PLUS, KC_EQL,
                                    _______, KC_LSFT, _______, _______
     ),
-    [_FUN] = LAYOUT_hummingbird(
+    [_FUN] = LAYOUT_zelkova(
         QK_RBT,  QK_BOOT, _______, _______, _______, XXXXXXX, KC_F7,   KC_F8,   KC_F9,   KC_F12,
         _______, _______, _______, _______, _______, XXXXXXX, KC_F4,   KC_F5,   KC_F6,   KC_F11,
                  _______, _______, _______,                   KC_F1,   KC_F2,   KC_F3,

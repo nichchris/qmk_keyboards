@@ -1,20 +1,26 @@
-# This file intentionally left blank
-
-### Some potentially needed stuff taken from
-### https://github.com/GEIGEIGEIST/qmk-config-totem/blob/main/totem/rules.mk
-# Ignore some warnings during the build, likely to be fixed before RP2040 PR is merged
-ALLOW_WARNINGS = yes
-
-### needed?
-# # PIO serial/WS2812 drivers must be used on RP2040
-# SERIAL_DRIVER = vendor
-# WS2812_DRIVER = vendor
-
-#SPACE SAVING
-AUDIO_ENABLE = no
-MUSIC_ENABLE = no
 # LTO must be disabled for RP2040 builds
 LTO_ENABLE = no
 SPACE_CADET_ENABLE = no
 GRAVE_ESC_ENABLE = no 
 MAGIC_ENABLE = no
+
+COMBO_ENABLE = yes
+CAPS_WORD_ENABLE = yes
+
+# MCU = RP2040
+# BOOTLOADER = rp2040
+WS2812_DRIVER = vendor
+
+# BELOW IS COPY
+SERIAL_DRIVER = vendor
+
+# BOOTMAGIC_ENABLE = yes      # Enable Bootmagic Lite
+
+#SPACE SAVING
+BACKLIGHT_ENABLE = no       # Enable keyboard backlight functionality
+AUDIO_ENABLE = no           # Audio output
+
+AUDIO_SUPPORTED = no        # Audio is not supported
+RGB_MATRIX_SUPPORTED = no   # RGB matrix is supported and enabled by default
+RGBLIGHT_SUPPORTED = no     # RGB underglow is supported, but not enabled by default
+RGB_MATRIX_ENABLE = no      # Enable keyboard RGB matrix functionality

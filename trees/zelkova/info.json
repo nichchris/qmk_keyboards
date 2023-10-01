@@ -1,6 +1,6 @@
 {
     "manufacturer": "nichchris",
-    "keyboard_name": "trees/zelkova",
+    "keyboard_name": "Zelkova",
     "maintainer": "nichchris",
     "bootloader": "rp2040",
     "processor": "RP2040",
@@ -23,8 +23,8 @@
         "encoder": false
     },
     "matrix_pins": {
-        "rows": ["GP2", "GP4", "GP3"],
-        "cols": ["GP26", "GP27", "GP28", "GP29", "GP6"]
+        "rows": ["GP3", "GP4", "GP2", "GP7"],
+        "cols": ["GP6", "GP29", "GP28", "GP27", "GP26"]
     },
     "indicators": {
         "num_lock": "GP16",
@@ -33,114 +33,6 @@
         "on_state": 0
     },
     "split": {
-        "enabled": true,
-        "soft_serial_pin": "GP0",
-        "transport": {
-            "protocol": "serial"
-        },
-    "layouts": {
-        "LAYOUT_zelkova": {
-            "layout": [
-                { "label": "L00", "matrix": [0, 0], "w": 1, "x": 0, "y": 0 },
-                { "label": "L01", "matrix": [0, 1], "w": 1, "x": 1, "y": 0 },
-                { "label": "L02", "matrix": [0, 2], "w": 1, "x": 2, "y": 0 },
-                { "label": "L03", "matrix": [0, 3], "w": 1, "x": 3, "y": 0 },
-                { "label": "L04", "matrix": [0, 4], "w": 1, "x": 4, "y": 0 },
-                { "label": "R00", "matrix": [3, 0], "w": 1, "x": 5, "y": 0 },
-                { "label": "R01", "matrix": [3, 1], "w": 1, "x": 6, "y": 0 },
-                { "label": "R02", "matrix": [3, 2], "w": 1, "x": 7, "y": 0 },
-                { "label": "R03", "matrix": [3, 3], "w": 1, "x": 8, "y": 0 },
-                { "label": "R04", "matrix": [3, 4], "w": 1, "x": 9, "y": 0 },
-                { "label": "L10", "matrix": [1, 0], "w": 1, "x": 0, "y": 1 },
-                { "label": "L11", "matrix": [1, 1], "w": 1, "x": 1, "y": 1 },
-                { "label": "L12", "matrix": [1, 2], "w": 1, "x": 2, "y": 1 },
-                { "label": "L13", "matrix": [1, 3], "w": 1, "x": 3, "y": 1 },
-                { "label": "L14", "matrix": [1, 4], "w": 1, "x": 4, "y": 1 },
-                { "label": "R10", "matrix": [4, 0], "w": 1, "x": 5, "y": 1 },
-                { "label": "R11", "matrix": [4, 1], "w": 1, "x": 6, "y": 1 },
-                { "label": "R12", "matrix": [4, 2], "w": 1, "x": 7, "y": 1 },
-                { "label": "R13", "matrix": [4, 3], "w": 1, "x": 8, "y": 1 },
-                { "label": "R14", "matrix": [4, 4], "w": 1, "x": 9, "y": 1 },
-                { "label": "L20", "matrix": [2, 0], "w": 1, "x": 1, "y": 2 },
-                { "label": "L21", "matrix": [2, 1], "w": 1, "x": 2, "y": 2 },
-                { "label": "L22", "matrix": [2, 2], "w": 1, "x": 3, "y": 2 },
-                { "label": "R22", "matrix": [5, 2], "w": 1, "x": 5, "y": 2 },
-                { "label": "R23", "matrix": [5, 3], "w": 1, "x": 6, "y": 2 },
-                { "label": "R24", "matrix": [5, 4], "w": 1, "x": 7, "y": 2 },
-                { "label": "L23", "matrix": [2, 3], "w": 1, "x": 3, "y": 3 },
-                { "label": "L24", "matrix": [2, 4], "w": 1, "x": 4, "y": 3 },
-                { "label": "R20", "matrix": [5, 0], "w": 1, "x": 5, "y": 3 },
-                { "label": "R21", "matrix": [5, 1], "w": 1, "x": 6, "y": 3 }
-            ]
-        }
-    }
+        "enabled": true
+    },
 }
-
-
-// {
-//     "manufacturer": "sepp",
-//     "url": "https://github.com/sebastian-stumpf/narfkb2",
-//     "maintainer": "sebastian-stumpf",
-//     "keyboard_name": "narfkb2",
-//     "usb": {
-//         "vid": "0xFEED",
-//         "pid": "0x1234",
-//         "device_version": "1.0.0"
-//     },
-//     "layouts": {
-//         "LAYOUT": {
-//             "layout": [
-//                 { "label": "L00", "x": 0, "y": 0 },
-//                 { "label": "L01", "x": 1, "y": 0 },
-//                 { "label": "L02", "x": 2, "y": 0 },
-//                 { "label": "L03", "x": 3, "y": 0 },
-//                 { "label": "L04", "x": 4, "y": 0 },
-//                 { "label": "L05", "x": 4, "y": 0 },
-//                 { "label": "R05", "x": 11, "y": 0 },
-//                 { "label": "R04", "x": 12, "y": 0 },
-//                 { "label": "R03", "x": 13, "y": 0 },
-//                 { "label": "R02", "x": 14, "y": 0 },
-//                 { "label": "R01", "x": 15, "y": 0 },
-//                 { "label": "R00", "x": 16, "y": 0 },
-//                 { "label": "L10", "x": 0, "y": 1 },
-//                 { "label": "L11", "x": 1, "y": 1 },
-//                 { "label": "L12", "x": 2, "y": 1 },
-//                 { "label": "L13", "x": 3, "y": 1 },
-//                 { "label": "L14", "x": 4, "y": 1 },
-//                 { "label": "L15", "x": 5, "y": 1 },
-//                 { "label": "L16", "x": 6, "y": 1 },
-//                 { "label": "R16", "x": 11, "y": 1 },
-//                 { "label": "R15", "x": 12, "y": 1 },
-//                 { "label": "R14", "x": 13, "y": 1 },
-//                 { "label": "R13", "x": 14, "y": 1 },
-//                 { "label": "R12", "x": 15, "y": 1 },
-//                 { "label": "R11", "x": 16, "y": 1 },
-//                 { "label": "R10", "x": 17, "y": 1 },
-//                 { "label": "L20", "x": 0, "y": 2 },
-//                 { "label": "L21", "x": 1, "y": 2 },
-//                 { "label": "L22", "x": 2, "y": 2 },
-//                 { "label": "L23", "x": 3, "y": 2 },
-//                 { "label": "L24", "x": 4, "y": 2 },
-//                 { "label": "L25", "x": 5, "y": 2 },
-//                 { "label": "L26", "x": 6, "y": 2 },
-//                 { "label": "L27", "x": 7, "y": 2 },
-//                 { "label": "L28", "x": 8, "y": 2 },
-//                 { "label": "R28", "x": 11, "y": 2 },
-//                 { "label": "R27", "x": 12, "y": 2 },
-//                 { "label": "R26", "x": 13, "y": 2 },
-//                 { "label": "R25", "x": 14, "y": 2 },
-//                 { "label": "R24", "x": 15, "y": 2 },
-//                 { "label": "R23", "x": 16, "y": 2 },
-//                 { "label": "R22", "x": 17, "y": 2 },
-//                 { "label": "R21", "x": 18, "y": 2 },
-//                 { "label": "R20", "x": 19, "y": 2 },
-//                 { "label": "L30", "x": 4, "y": 3 },
-//                 { "label": "L31", "x": 5, "y": 3 },
-//                 { "label": "L32", "x": 6, "y": 3 },
-//                 { "label": "R32", "x": 9, "y": 3 },
-//                 { "label": "R31", "x": 10, "y": 3 },
-//                 { "label": "R30", "x": 11, "y": 3 }
-//             ]
-//         }
-//     }
-// }

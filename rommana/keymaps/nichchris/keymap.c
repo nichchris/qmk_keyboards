@@ -1,5 +1,5 @@
 #include QMK_KEYBOARD_H
-
+#include "rommana.h"
 #include "keymap_norwegian.h"
 
 //// definitions
@@ -24,7 +24,7 @@ enum custom_keycodes
 
 // Shortcut to make keymap more readable
 
-#define L_SYM LT(_SYM, KC_BSPC)
+#define L_SYM LT(_SYM, KC_BSPC)/*  */
 #define L_MOU LT(_MOU, KC_SPC)
 #define L_NAV LT(_NAV, KC_ENT)
 
@@ -90,13 +90,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      *             │ESC│SPC││RET│BSP│
      *             └───┴───┘└───┴───┘
      */
-    [_BASE] = LAYOUT_23332_2(
+[_BASE] = LAYOUT_23332(
         KC_K,    KC_W,    KC_F,    KC_P,   NO_MINS, KC_NUHS,   KC_L,    KC_U,    KC_Y,   KC_X,
        GUI_R,   ALT_S,   CRTL_T,   SHT_H,   NO_COMM,  KC_DOT,  SHT_N,   CRTL_A,   ALT_I,   GUI_O,  
                RALT_C,    KC_G,    KC_D,                       KC_M,    KC_B,  RALT_J,
                                   L_NAV,     L_MOU,    KC_E,  L_SYM
     ),
-[_SYM]= LAYOUT_23332_2(
+[_SYM]= LAYOUT_23332(
 // ╭─────────────────────────────────────────────╮ ╭─────────────────────────────────────────────╮
       NO_EQL,    KC_9,    KC_8,    KC_7, NO_MINS, RALT(NO_4), NO_HASH, NO_PERC, NO_AMPR, NO_DQUO,//QK_GESC,
 // ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
@@ -108,7 +108,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //                   ╰───────────────────────────╯ ╰──────────────────╯
 ),
 
-[_SYM_COPY]= LAYOUT_23332_2(
+[_SYM_COPY]= LAYOUT_23332(
 // ╭─────────────────────────────────────────────╮ ╭─────────────────────────────────────────────╮
       NO_EQL,    KC_9,    KC_8,    KC_7, NO_MINS,   S(NO_4), NO_HASH, NO_PERC, NO_AMPR, NO_DQUO,//QK_GESC,
 // ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
@@ -119,7 +119,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                 L_NAV,   L_MOU,     QK_GESC,    L_SYM
 //                   ╰───────────────────────────╯ ╰──────────────────╯
 ),
-[_NAV]= LAYOUT_23332_2(
+[_NAV]= LAYOUT_23332(
 // ╭─────────────────────────────────────────────╮ ╭─────────────────────────────────────────────╮
      KC_ESC,   KC_F2,   KC_F5,  KC_TAB,  KC_DEL,    C(KC_BSPC), KC_PGUP,   KC_UP, KC_PGDN,  KC_ENT,
 // ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
@@ -131,7 +131,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //                   ╰───────────────────────────╯ ╰──────────────────╯
 ),
 
-[_MOU] = LAYOUT_23332_2(
+[_MOU] = LAYOUT_23332(
 // ╭─────────────────────────────────────────────╮ ╭─────────────────────────────────────────────╮
       KC_ESC,  KC_WH_U, KC_BTN5,  KC_TAB, XXXXXXX,C(KC_BSPC), KC_MPRV,  KC_MPLY,  KC_MNXT, KC_ENT,
 // ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
@@ -143,7 +143,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //                   ╰───────────────────────────╯ ╰──────────────────╯
 ),
 
-[_SYS] = LAYOUT_23332_2(
+[_SYS] = LAYOUT_23332(
 // ╭─────────────────────────────────────────────╮ ╭─────────────────────────────────────────────╮
      KC_F1,    KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,    KC_F8,    KC_F9,    KC_F10,
 // ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
@@ -154,7 +154,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                 _______,  _______,  XXXXXXX, _______
 //                   ╰───────────────────────────╯ ╰──────────────────╯
 ),
-// [_SYM] = LAYOUT_23332_2(
+// [_SYM] = LAYOUT_hummingbird(
 // // ╭─────────────────────────────────────────────╮ ╭─────────────────────────────────────────────╮
 //         KC_V,    KC_9,    KC_8,    KC_7, XXXXXXX,    XXXXXXX,    KC_L,    KC_U,    KC_Y,    KC_X,
 // // ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
